@@ -2,247 +2,23 @@
   "contractName": "IERC721Metadata",
   "abi": [
     {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "interfaceId",
-          "type": "bytes4"
-        }
-      ],
-      "name": "supportsInterface",
-      "outputs": [
-        {
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "getApproved",
-      "outputs": [
-        {
-          "name": "operator",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "approve",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "from",
-          "type": "address"
-        },
-        {
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "transferFrom",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "from",
-          "type": "address"
-        },
-        {
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "safeTransferFrom",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "ownerOf",
-      "outputs": [
-        {
-          "name": "owner",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "owner",
-          "type": "address"
-        }
-      ],
-      "name": "balanceOf",
-      "outputs": [
-        {
-          "name": "balance",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "operator",
-          "type": "address"
-        },
-        {
-          "name": "_approved",
-          "type": "bool"
-        }
-      ],
-      "name": "setApprovalForAll",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "from",
-          "type": "address"
-        },
-        {
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "name": "tokenId",
-          "type": "uint256"
-        },
-        {
-          "name": "data",
-          "type": "bytes"
-        }
-      ],
-      "name": "safeTransferFrom",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "owner",
-          "type": "address"
-        },
-        {
-          "name": "operator",
-          "type": "address"
-        }
-      ],
-      "name": "isApprovedForAll",
-      "outputs": [
-        {
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
       "anonymous": false,
       "inputs": [
         {
           "indexed": true,
-          "name": "from",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "Transfer",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
+          "internalType": "address",
           "name": "owner",
           "type": "address"
         },
         {
           "indexed": true,
+          "internalType": "address",
           "name": "approved",
           "type": "address"
         },
         {
           "indexed": true,
+          "internalType": "uint256",
           "name": "tokenId",
           "type": "uint256"
         }
@@ -255,16 +31,19 @@
       "inputs": [
         {
           "indexed": true,
+          "internalType": "address",
           "name": "owner",
           "type": "address"
         },
         {
           "indexed": true,
+          "internalType": "address",
           "name": "operator",
           "type": "address"
         },
         {
           "indexed": false,
+          "internalType": "bool",
           "name": "approved",
           "type": "bool"
         }
@@ -273,11 +52,267 @@
       "type": "event"
     },
     {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getApproved",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        }
+      ],
+      "name": "isApprovedForAll",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "_approved",
+          "type": "bool"
+        }
+      ],
+      "name": "setApprovalForAll",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
       "constant": true,
       "inputs": [],
       "name": "name",
       "outputs": [
         {
+          "internalType": "string",
           "name": "",
           "type": "string"
         }
@@ -292,6 +327,7 @@
       "name": "symbol",
       "outputs": [
         {
+          "internalType": "string",
           "name": "",
           "type": "string"
         }
@@ -304,6 +340,7 @@
       "constant": true,
       "inputs": [
         {
+          "internalType": "uint256",
           "name": "tokenId",
           "type": "uint256"
         }
@@ -311,6 +348,7 @@
       "name": "tokenURI",
       "outputs": [
         {
+          "internalType": "string",
           "name": "",
           "type": "string"
         }
@@ -320,7 +358,7 @@
       "type": "function"
     }
   ],
-  "metadata": "",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"approved\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getApproved\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"tokenURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"See https://eips.ethereum.org/EIPS/eip-721\",\"methods\":{\"balanceOf(address)\":{\"details\":\"Returns the number of NFTs in `owner`'s account.\"},\"ownerOf(uint256)\":{\"details\":\"Returns the owner of the NFT specified by `tokenId`.\"},\"safeTransferFrom(address,address,uint256)\":{\"details\":\"Transfers a specific NFT (`tokenId`) from one account (`from`) to another (`to`).      *       * Requirements: - `from`, `to` cannot be zero. - `tokenId` must be owned by `from`. - If the caller is not `from`, it must be have been allowed to move this NFT by either `approve` or `setApproveForAll`.\"},\"supportsInterface(bytes4)\":{\"details\":\"Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding [EIP section](https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified) to learn more about how these ids are created.      * This function call must use less than 30 000 gas.\"},\"transferFrom(address,address,uint256)\":{\"details\":\"Transfers a specific NFT (`tokenId`) from one account (`from`) to another (`to`).      * Requirements: - If the caller is not `from`, it must be approved to move this NFT by either `approve` or `setApproveForAll`.\"}},\"title\":\"ERC-721 Non-Fungible Token Standard, optional metadata extension\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/jacob/code/Krell-Kolor/src/contracts/ERC721Full.sol\":\"IERC721Metadata\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/jacob/code/Krell-Kolor/src/contracts/ERC721Full.sol\":{\"keccak256\":\"0xf335fba022c592d6c02b200494208a205e9767903f3f3d80965db44b7b7d5902\",\"urls\":[\"bzz-raw://91cd9c0bdc1b6b86e9eba1f2745ebd075681aefc853012b4f0a126ed55e07e02\",\"dweb:/ipfs/QmdoVaAGgtSiPK3V2naqrfdAc7JqwNX9VYrtJH1KbDbm6m\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
@@ -388,7 +426,7 @@
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "interface",
-        "documentation": "@dev Interface of the ERC165 standard, as defined in the\r\n[EIP](https://eips.ethereum.org/EIPS/eip-165).\r\n\n * Implementers can declare support of contract interfaces, which can then be\r\nqueried by others (`ERC165Checker`).\r\n\n * For an implementation, see `ERC165`.\r",
+        "documentation": "@dev Interface of the ERC165 standard, as defined in the\n[EIP](https://eips.ethereum.org/EIPS/eip-165).\n\n * Implementers can declare support of contract interfaces, which can then be\nqueried by others (`ERC165Checker`).\n\n * For an implementation, see `ERC165`.",
         "fullyImplemented": false,
         "id": 9,
         "linearizedBaseContracts": [
@@ -399,7 +437,7 @@
         "nodes": [
           {
             "body": null,
-            "documentation": "@dev Returns true if this contract implements the interface defined by\r\n`interfaceId`. See the corresponding\r\n[EIP section](https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified)\r\nto learn more about how these ids are created.\r\n\n     * This function call must use less than 30 000 gas.\r",
+            "documentation": "@dev Returns true if this contract implements the interface defined by\n`interfaceId`. See the corresponding\n[EIP section](https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified)\nto learn more about how these ids are created.\n\n     * This function call must use less than 30 000 gas.",
             "id": 8,
             "implemented": false,
             "kind": "function",
@@ -518,7 +556,7 @@
           9
         ],
         "contractKind": "contract",
-        "documentation": "@dev Required interface of an ERC721 compliant contract.\r",
+        "documentation": "@dev Required interface of an ERC721 compliant contract.",
         "fullyImplemented": false,
         "id": 110,
         "linearizedBaseContracts": [
@@ -824,7 +862,7 @@
           },
           {
             "body": null,
-            "documentation": "@dev Returns the number of NFTs in `owner`'s account.\r",
+            "documentation": "@dev Returns the number of NFTs in `owner`'s account.",
             "id": 43,
             "implemented": false,
             "kind": "function",
@@ -906,7 +944,7 @@
           },
           {
             "body": null,
-            "documentation": "@dev Returns the owner of the NFT specified by `tokenId`.\r",
+            "documentation": "@dev Returns the owner of the NFT specified by `tokenId`.",
             "id": 50,
             "implemented": false,
             "kind": "function",
@@ -988,7 +1026,7 @@
           },
           {
             "body": null,
-            "documentation": "@dev Transfers a specific NFT (`tokenId`) from one account (`from`) to\r\nanother (`to`).\r\n\n     * \r\n\n     * Requirements:\r\n- `from`, `to` cannot be zero.\r\n- `tokenId` must be owned by `from`.\r\n- If the caller is not `from`, it must be have been allowed to move this\r\nNFT by either `approve` or `setApproveForAll`.\r",
+            "documentation": "@dev Transfers a specific NFT (`tokenId`) from one account (`from`) to\nanother (`to`).\n\n     * \n\n     * Requirements:\n- `from`, `to` cannot be zero.\n- `tokenId` must be owned by `from`.\n- If the caller is not `from`, it must be have been allowed to move this\nNFT by either `approve` or `setApproveForAll`.",
             "id": 59,
             "implemented": false,
             "kind": "function",
@@ -1096,7 +1134,7 @@
           },
           {
             "body": null,
-            "documentation": "@dev Transfers a specific NFT (`tokenId`) from one account (`from`) to\r\nanother (`to`).\r\n\n     * Requirements:\r\n- If the caller is not `from`, it must be approved to move this NFT by\r\neither `approve` or `setApproveForAll`.\r",
+            "documentation": "@dev Transfers a specific NFT (`tokenId`) from one account (`from`) to\nanother (`to`).\n\n     * Requirements:\n- If the caller is not `from`, it must be approved to move this NFT by\neither `approve` or `setApproveForAll`.",
             "id": 68,
             "implemented": false,
             "kind": "function",
@@ -1708,7 +1746,7 @@
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
-        "documentation": "@title ERC721 token receiver interface\r\n@dev Interface for any contract that wants to support safeTransfers\r\nfrom ERC721 asset contracts.\r",
+        "documentation": "@title ERC721 token receiver interface\n@dev Interface for any contract that wants to support safeTransfers\nfrom ERC721 asset contracts.",
         "fullyImplemented": false,
         "id": 125,
         "linearizedBaseContracts": [
@@ -1719,7 +1757,7 @@
         "nodes": [
           {
             "body": null,
-            "documentation": "@notice Handle the receipt of an NFT\r\n@dev The ERC721 smart contract calls this function on the recipient\r\nafter a `safeTransfer`. This function MUST return the function selector,\r\notherwise the caller will revert the transaction. The selector to be\r\nreturned can be obtained as `this.onERC721Received.selector`. This\r\nfunction MAY throw to revert and reject the transfer.\r\nNote: the ERC721 contract address is always the message sender.\r\n@param operator The address which called `safeTransferFrom` function\r\n@param from The address which previously owned the token\r\n@param tokenId The NFT identifier which is being transferred\r\n@param data Additional data with no specified format\r\n@return bytes4 `bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`\r",
+            "documentation": "@notice Handle the receipt of an NFT\n@dev The ERC721 smart contract calls this function on the recipient\nafter a `safeTransfer`. This function MUST return the function selector,\notherwise the caller will revert the transaction. The selector to be\nreturned can be obtained as `this.onERC721Received.selector`. This\nfunction MAY throw to revert and reject the transfer.\nNote: the ERC721 contract address is always the message sender.\n@param operator The address which called `safeTransferFrom` function\n@param from The address which previously owned the token\n@param tokenId The NFT identifier which is being transferred\n@param data Additional data with no specified format\n@return bytes4 `bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`",
             "id": 124,
             "implemented": false,
             "kind": "function",
@@ -1897,7 +1935,7 @@
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "library",
-        "documentation": "@dev Wrappers over Solidity's arithmetic operations with added overflow\r\nchecks.\r\n\n * Arithmetic operations in Solidity wrap on overflow. This can easily result\r\nin bugs, because programmers usually assume that an overflow raises an\r\nerror, which is the standard behavior in high level programming languages.\r\n`SafeMath` restores this intuition by reverting the transaction when an\r\noperation overflows.\r\n\n * Using this library instead of the unchecked operations eliminates an entire\r\nclass of bugs, so it's recommended to use it always.\r",
+        "documentation": "@dev Wrappers over Solidity's arithmetic operations with added overflow\nchecks.\n\n * Arithmetic operations in Solidity wrap on overflow. This can easily result\nin bugs, because programmers usually assume that an overflow raises an\nerror, which is the standard behavior in high level programming languages.\n`SafeMath` restores this intuition by reverting the transaction when an\noperation overflows.\n\n * Using this library instead of the unchecked operations eliminates an entire\nclass of bugs, so it's recommended to use it always.",
         "fullyImplemented": true,
         "id": 257,
         "linearizedBaseContracts": [
@@ -2125,7 +2163,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns the addition of two unsigned integers, reverting on\r\noverflow.\r\n\n     * Counterpart to Solidity's `+` operator.\r\n\n     * Requirements:\r\n- Addition cannot overflow.\r",
+            "documentation": "@dev Returns the addition of two unsigned integers, reverting on\noverflow.\n\n     * Counterpart to Solidity's `+` operator.\n\n     * Requirements:\n- Addition cannot overflow.",
             "id": 151,
             "implemented": true,
             "kind": "function",
@@ -2449,7 +2487,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns the subtraction of two unsigned integers, reverting on\r\noverflow (when the result is negative).\r\n\n     * Counterpart to Solidity's `-` operator.\r\n\n     * Requirements:\r\n- Subtraction cannot overflow.\r",
+            "documentation": "@dev Returns the subtraction of two unsigned integers, reverting on\noverflow (when the result is negative).\n\n     * Counterpart to Solidity's `-` operator.\n\n     * Requirements:\n- Subtraction cannot overflow.",
             "id": 176,
             "implemented": true,
             "kind": "function",
@@ -2892,7 +2930,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns the multiplication of two unsigned integers, reverting on\r\noverflow.\r\n\n     * Counterpart to Solidity's `*` operator.\r\n\n     * Requirements:\r\n- Multiplication cannot overflow.\r",
+            "documentation": "@dev Returns the multiplication of two unsigned integers, reverting on\noverflow.\n\n     * Counterpart to Solidity's `*` operator.\n\n     * Requirements:\n- Multiplication cannot overflow.",
             "id": 210,
             "implemented": true,
             "kind": "function",
@@ -3221,7 +3259,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns the integer division of two unsigned integers. Reverts on\r\ndivision by zero. The result is rounded towards zero.\r\n\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\r\n`revert` opcode (which leaves remaining gas untouched) while Solidity\r\nuses an invalid opcode to revert (consuming all remaining gas).\r\n\n     * Requirements:\r\n- The divisor cannot be zero.\r",
+            "documentation": "@dev Returns the integer division of two unsigned integers. Reverts on\ndivision by zero. The result is rounded towards zero.\n\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\n`revert` opcode (which leaves remaining gas untouched) while Solidity\nuses an invalid opcode to revert (consuming all remaining gas).\n\n     * Requirements:\n- The divisor cannot be zero.",
             "id": 235,
             "implemented": true,
             "kind": "function",
@@ -3501,7 +3539,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\r\nReverts when dividing by zero.\r\n\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\r\nopcode (which leaves remaining gas untouched) while Solidity uses an\r\ninvalid opcode to revert (consuming all remaining gas).\r\n\n     * Requirements:\r\n- The divisor cannot be zero.\r",
+            "documentation": "@dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\nReverts when dividing by zero.\n\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\nopcode (which leaves remaining gas untouched) while Solidity uses an\ninvalid opcode to revert (consuming all remaining gas).\n\n     * Requirements:\n- The divisor cannot be zero.",
             "id": 256,
             "implemented": true,
             "kind": "function",
@@ -3625,7 +3663,7 @@
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "library",
-        "documentation": "@dev Collection of functions related to the address type,\r",
+        "documentation": "@dev Collection of functions related to the address type,",
         "fullyImplemented": true,
         "id": 275,
         "linearizedBaseContracts": [
@@ -3680,15 +3718,6 @@
                 {
                   "externalReferences": [
                     {
-                      "account": {
-                        "declaration": 260,
-                        "isOffset": false,
-                        "isSlot": false,
-                        "src": "8852:7:0",
-                        "valueSize": 1
-                      }
-                    },
-                    {
                       "size": {
                         "declaration": 266,
                         "isOffset": false,
@@ -3696,12 +3725,21 @@
                         "src": "8832:4:0",
                         "valueSize": 1
                       }
+                    },
+                    {
+                      "account": {
+                        "declaration": 260,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "8852:7:0",
+                        "valueSize": 1
+                      }
                     }
                   ],
                   "id": 268,
                   "nodeType": "InlineAssembly",
-                  "operations": "{\n    size := extcodesize(account)\n}",
-                  "src": "8821:57:0"
+                  "operations": "{ size := extcodesize(account) }",
+                  "src": "8821:41:0"
                 },
                 {
                   "expression": {
@@ -3761,7 +3799,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns true if `account` is a contract.\r\n\n     * This test is non-exhaustive, and there may be false-negatives: during the\r\nexecution of a contract's constructor, its address will be reported as\r\nnot containing a contract.\r\n\n     * > It is unsafe to assume that an address for which this function returns\r\nfalse is an externally-owned account (EOA) and not a contract.\r",
+            "documentation": "@dev Returns true if `account` is a contract.\n\n     * This test is non-exhaustive, and there may be false-negatives: during the\nexecution of a contract's constructor, its address will be reported as\nnot containing a contract.\n\n     * > It is unsafe to assume that an address for which this function returns\nfalse is an externally-owned account (EOA) and not a contract.",
             "id": 274,
             "implemented": true,
             "kind": "function",
@@ -3860,7 +3898,7 @@
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "library",
-        "documentation": "@title Counters\r\n@author Matt Condon (@shrugs)\r\n@dev Provides counters that can only be incremented or decremented by one. This can be used e.g. to track the number\r\nof elements in a mapping, issuing ERC721 ids, or counting request ids.\r\n\n * Include with `using Counters for Counters.Counter;`\r\nSince it is not possible to overflow a 256 bit integer with increments of one, `increment` can skip the SafeMath\r\noverflow check, thereby saving gas. This does assume however correct usage, in that the underlying `_value` is never\r\ndirectly accessed.\r",
+        "documentation": "@title Counters\n@author Matt Condon (@shrugs)\n@dev Provides counters that can only be incremented or decremented by one. This can be used e.g. to track the number\nof elements in a mapping, issuing ERC721 ids, or counting request ids.\n\n * Include with `using Counters for Counters.Counter;`\nSince it is not possible to overflow a 256 bit integer with increments of one, `increment` can skip the SafeMath\noverflow check, thereby saving gas. This does assume however correct usage, in that the underlying `_value` is never\ndirectly accessed.",
         "fullyImplemented": true,
         "id": 322,
         "linearizedBaseContracts": [
@@ -4423,7 +4461,7 @@
           9
         ],
         "contractKind": "contract",
-        "documentation": "@dev Implementation of the `IERC165` interface.\r\n\n * Contracts may inherit from this and call `_registerInterface` to declare\r\ntheir support of an interface.\r",
+        "documentation": "@dev Implementation of the `IERC165` interface.\n\n * Contracts may inherit from this and call `_registerInterface` to declare\ntheir support of an interface.",
         "fullyImplemented": true,
         "id": 372,
         "linearizedBaseContracts": [
@@ -4662,7 +4700,7 @@
                 }
               ]
             },
-            "documentation": "@dev See `IERC165.supportsInterface`.\r\n\n     * Time complexity O(1), guaranteed to always use less than 30 000 gas.\r",
+            "documentation": "@dev See `IERC165.supportsInterface`.\n\n     * Time complexity O(1), guaranteed to always use less than 30 000 gas.",
             "id": 352,
             "implemented": true,
             "kind": "function",
@@ -4943,7 +4981,7 @@
                 }
               ]
             },
-            "documentation": "@dev Registers the contract as an implementer of the interface defined by\r\n`interfaceId`. Support of the actual ERC165 interface is automatic and\r\nregistering its interface id is not required.\r\n\n     * See `IERC165.supportsInterface`.\r\n\n     * Requirements:\r\n\n     * - `interfaceId` cannot be the ERC165 invalid interface (`0xffffffff`).\r",
+            "documentation": "@dev Registers the contract as an implementer of the interface defined by\n`interfaceId`. Support of the actual ERC165 interface is automatic and\nregistering its interface id is not required.\n\n     * See `IERC165.supportsInterface`.\n\n     * Requirements:\n\n     * - `interfaceId` cannot be the ERC165 invalid interface (`0xffffffff`).",
             "id": 371,
             "implemented": true,
             "kind": "function",
@@ -5055,7 +5093,7 @@
           372
         ],
         "contractKind": "contract",
-        "documentation": "@title ERC721 Non-Fungible Token Standard basic implementation\r\n@dev see https://eips.ethereum.org/EIPS/eip-721\r",
+        "documentation": "@title ERC721 Non-Fungible Token Standard basic implementation\n@dev see https://eips.ethereum.org/EIPS/eip-721",
         "fullyImplemented": true,
         "id": 930,
         "linearizedBaseContracts": [
@@ -5768,7 +5806,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the balance of the specified address.\r\n@param owner address to query the balance of\r\n@return uint256 representing the amount owned by the passed address\r",
+            "documentation": "@dev Gets the balance of the specified address.\n@param owner address to query the balance of\n@return uint256 representing the amount owned by the passed address",
             "id": 441,
             "implemented": true,
             "kind": "function",
@@ -6106,7 +6144,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the owner of the specified token ID.\r\n@param tokenId uint256 ID of the token to query the owner of\r\n@return address currently marked as the owner of the given token ID\r",
+            "documentation": "@dev Gets the owner of the specified token ID.\n@param tokenId uint256 ID of the token to query the owner of\n@return address currently marked as the owner of the given token ID",
             "id": 466,
             "implemented": true,
             "kind": "function",
@@ -6784,7 +6822,7 @@
                 }
               ]
             },
-            "documentation": "@dev Approves another address to transfer the given token ID\r\nThe zero address indicates there is no approved address.\r\nThere can only be one approved address per token at a given time.\r\nCan only be called by the token owner or an approved operator.\r\n@param to address to be approved for the given token ID\r\n@param tokenId uint256 ID of the token to be approved\r",
+            "documentation": "@dev Approves another address to transfer the given token ID\nThe zero address indicates there is no approved address.\nThere can only be one approved address per token at a given time.\nCan only be called by the token owner or an approved operator.\n@param to address to be approved for the given token ID\n@param tokenId uint256 ID of the token to be approved",
             "id": 513,
             "implemented": true,
             "kind": "function",
@@ -7032,7 +7070,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the approved address for a token ID, or zero if no address set\r\nReverts if the token ID does not exist.\r\n@param tokenId uint256 ID of the token to query the approval of\r\n@return address currently approved for the given token ID\r",
+            "documentation": "@dev Gets the approved address for a token ID, or zero if no address set\nReverts if the token ID does not exist.\n@param tokenId uint256 ID of the token to query the approval of\n@return address currently approved for the given token ID",
             "id": 532,
             "implemented": true,
             "kind": "function",
@@ -7467,7 +7505,7 @@
                 }
               ]
             },
-            "documentation": "@dev Sets or unsets the approval of a given operator\r\nAn operator is allowed to transfer all tokens of the sender on their behalf.\r\n@param to operator address to set the approval\r\n@param approved representing the status of the approval to be set\r",
+            "documentation": "@dev Sets or unsets the approval of a given operator\nAn operator is allowed to transfer all tokens of the sender on their behalf.\n@param to operator address to set the approval\n@param approved representing the status of the approval to be set",
             "id": 564,
             "implemented": true,
             "kind": "function",
@@ -7627,7 +7665,7 @@
                 }
               ]
             },
-            "documentation": "@dev Tells whether an operator is approved by a given owner.\r\n@param owner owner address which you want to query the approval of\r\n@param operator operator address which you want to query the approval of\r\n@return bool whether the given operator is approved by the given owner\r",
+            "documentation": "@dev Tells whether an operator is approved by a given owner.\n@param owner owner address which you want to query the approval of\n@param operator operator address which you want to query the approval of\n@return bool whether the given operator is approved by the given owner",
             "id": 580,
             "implemented": true,
             "kind": "function",
@@ -7978,7 +8016,7 @@
                 }
               ]
             },
-            "documentation": "@dev Transfers the ownership of a given token ID to another address.\r\nUsage of this method is discouraged, use `safeTransferFrom` whenever possible.\r\nRequires the msg.sender to be the owner, approved, or operator.\r\n@param from current owner of the token\r\n@param to address to receive the ownership of the given token ID\r\n@param tokenId uint256 ID of the token to be transferred\r",
+            "documentation": "@dev Transfers the ownership of a given token ID to another address.\nUsage of this method is discouraged, use `safeTransferFrom` whenever possible.\nRequires the msg.sender to be the owner, approved, or operator.\n@param from current owner of the token\n@param to address to receive the ownership of the given token ID\n@param tokenId uint256 ID of the token to be transferred",
             "id": 605,
             "implemented": true,
             "kind": "function",
@@ -8205,7 +8243,7 @@
                 }
               ]
             },
-            "documentation": "@dev Safely transfers the ownership of a given token ID to another address\r\nIf the target address is a contract, it must implement `onERC721Received`,\r\nwhich is called upon a safe transfer, and return the magic value\r\n`bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`; otherwise,\r\nthe transfer is reverted.\r\nRequires the msg.sender to be the owner, approved, or operator\r\n@param from current owner of the token\r\n@param to address to receive the ownership of the given token ID\r\n@param tokenId uint256 ID of the token to be transferred\r",
+            "documentation": "@dev Safely transfers the ownership of a given token ID to another address\nIf the target address is a contract, it must implement `onERC721Received`,\nwhich is called upon a safe transfer, and return the magic value\n`bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`; otherwise,\nthe transfer is reverted.\nRequires the msg.sender to be the owner, approved, or operator\n@param from current owner of the token\n@param to address to receive the ownership of the given token ID\n@param tokenId uint256 ID of the token to be transferred",
             "id": 622,
             "implemented": true,
             "kind": "function",
@@ -8575,7 +8613,7 @@
                 }
               ]
             },
-            "documentation": "@dev Safely transfers the ownership of a given token ID to another address\r\nIf the target address is a contract, it must implement `onERC721Received`,\r\nwhich is called upon a safe transfer, and return the magic value\r\n`bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`; otherwise,\r\nthe transfer is reverted.\r\nRequires the msg.sender to be the owner, approved, or operator\r\n@param from current owner of the token\r\n@param to address to receive the ownership of the given token ID\r\n@param tokenId uint256 ID of the token to be transferred\r\n@param _data bytes data to send along with a safe transfer check\r",
+            "documentation": "@dev Safely transfers the ownership of a given token ID to another address\nIf the target address is a contract, it must implement `onERC721Received`,\nwhich is called upon a safe transfer, and return the magic value\n`bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`; otherwise,\nthe transfer is reverted.\nRequires the msg.sender to be the owner, approved, or operator\n@param from current owner of the token\n@param to address to receive the ownership of the given token ID\n@param tokenId uint256 ID of the token to be transferred\n@param _data bytes data to send along with a safe transfer check",
             "id": 650,
             "implemented": true,
             "kind": "function",
@@ -8886,7 +8924,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns whether the specified token exists.\r\n@param tokenId uint256 ID of the token to query the existence of\r\n@return bool whether the token exists\r",
+            "documentation": "@dev Returns whether the specified token exists.\n@param tokenId uint256 ID of the token to query the existence of\n@return bool whether the token exists",
             "id": 670,
             "implemented": true,
             "kind": "function",
@@ -9433,7 +9471,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns whether the given spender can transfer a given token ID.\r\n@param spender address of the spender to query\r\n@param tokenId uint256 ID of the token to be transferred\r\n@return bool whether the msg.sender is approved for the given token ID,\r\nis an operator of the owner, or is the owner of the token\r",
+            "documentation": "@dev Returns whether the given spender can transfer a given token ID.\n@param spender address of the spender to query\n@param tokenId uint256 ID of the token to be transferred\n@return bool whether the msg.sender is approved for the given token ID,\nis an operator of the owner, or is the owner of the token",
             "id": 709,
             "implemented": true,
             "kind": "function",
@@ -10114,7 +10152,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to mint a new token.\r\nReverts if the given token ID already exists.\r\n@param to The address that will own the minted token\r\n@param tokenId uint256 ID of the token to be minted\r",
+            "documentation": "@dev Internal function to mint a new token.\nReverts if the given token ID already exists.\n@param to The address that will own the minted token\n@param tokenId uint256 ID of the token to be minted",
             "id": 754,
             "implemented": true,
             "kind": "function",
@@ -10729,7 +10767,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to burn a specific token.\r\nReverts if the token does not exist.\r\nDeprecated, use _burn(uint256) instead.\r\n@param owner owner of the token to burn\r\n@param tokenId uint256 ID of the token being burned\r",
+            "documentation": "@dev Internal function to burn a specific token.\nReverts if the token does not exist.\nDeprecated, use _burn(uint256) instead.\n@param owner owner of the token to burn\n@param tokenId uint256 ID of the token being burned",
             "id": 797,
             "implemented": true,
             "kind": "function",
@@ -10928,7 +10966,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to burn a specific token.\r\nReverts if the token does not exist.\r\n@param tokenId uint256 ID of the token being burned\r",
+            "documentation": "@dev Internal function to burn a specific token.\nReverts if the token does not exist.\n@param tokenId uint256 ID of the token being burned",
             "id": 810,
             "implemented": true,
             "kind": "function",
@@ -11662,7 +11700,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to transfer ownership of a given token ID to another address.\r\nAs opposed to transferFrom, this imposes no restrictions on msg.sender.\r\n@param from current owner of the token\r\n@param to address to receive the ownership of the given token ID\r\n@param tokenId uint256 ID of the token to be transferred\r",
+            "documentation": "@dev Internal function to transfer ownership of a given token ID to another address.\nAs opposed to transferFrom, this imposes no restrictions on msg.sender.\n@param from current owner of the token\n@param to address to receive the ownership of the given token ID\n@param tokenId uint256 ID of the token to be transferred",
             "id": 866,
             "implemented": true,
             "kind": "function",
@@ -12147,7 +12185,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to invoke `onERC721Received` on a target address.\r\nThe call is not executed if the target address is not a contract.\r\n\n     * This function is deprecated.\r\n@param from address representing the previous owner of the given token ID\r\n@param to target address that will receive the tokens\r\n@param tokenId uint256 ID of the token to be transferred\r\n@param _data bytes optional data to send along with the call\r\n@return bool whether the call correctly returned the expected magic value\r",
+            "documentation": "@dev Internal function to invoke `onERC721Received` on a target address.\nThe call is not executed if the target address is not a contract.\n\n     * This function is deprecated.\n@param from address representing the previous owner of the given token ID\n@param to target address that will receive the tokens\n@param tokenId uint256 ID of the token to be transferred\n@param _data bytes optional data to send along with the call\n@return bool whether the call correctly returned the expected magic value",
             "id": 906,
             "implemented": true,
             "kind": "function",
@@ -12558,7 +12596,7 @@
                 }
               ]
             },
-            "documentation": "@dev Private function to clear current approval of a given token ID.\r\n@param tokenId uint256 ID of the token to be transferred\r",
+            "documentation": "@dev Private function to clear current approval of a given token ID.\n@param tokenId uint256 ID of the token to be transferred",
             "id": 929,
             "implemented": true,
             "kind": "function",
@@ -12651,7 +12689,7 @@
           110
         ],
         "contractKind": "contract",
-        "documentation": "@title ERC-721 Non-Fungible Token Standard, optional enumeration extension\r\n@dev See https://eips.ethereum.org/EIPS/eip-721\r",
+        "documentation": "@title ERC-721 Non-Fungible Token Standard, optional enumeration extension\n@dev See https://eips.ethereum.org/EIPS/eip-721",
         "fullyImplemented": false,
         "id": 955,
         "linearizedBaseContracts": [
@@ -12978,14 +13016,14 @@
           }
         ],
         "contractDependencies": [
-          930,
-          955,
           9,
           110,
-          372
+          372,
+          930,
+          955
         ],
         "contractKind": "contract",
-        "documentation": "@title ERC-721 Non-Fungible Token with optional enumeration extension logic\r\n@dev See https://eips.ethereum.org/EIPS/eip-721\r",
+        "documentation": "@title ERC-721 Non-Fungible Token with optional enumeration extension logic\n@dev See https://eips.ethereum.org/EIPS/eip-721",
         "fullyImplemented": true,
         "id": 1288,
         "linearizedBaseContracts": [
@@ -13285,7 +13323,7 @@
                 }
               ]
             },
-            "documentation": "@dev Constructor function.\r",
+            "documentation": "@dev Constructor function.",
             "id": 989,
             "implemented": true,
             "kind": "constructor",
@@ -13540,7 +13578,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the token ID at a given index of the tokens list of the requested owner.\r\n@param owner address owning the tokens list to be accessed\r\n@param index uint256 representing the index to be accessed of the requested tokens list\r\n@return uint256 token ID at the given index of the tokens list owned by the requested address\r",
+            "documentation": "@dev Gets the token ID at a given index of the tokens list of the requested owner.\n@param owner address owning the tokens list to be accessed\n@param index uint256 representing the index to be accessed of the requested tokens list\n@return uint256 token ID at the given index of the tokens list owned by the requested address",
             "id": 1014,
             "implemented": true,
             "kind": "function",
@@ -13689,7 +13727,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the total amount of tokens stored by the contract.\r\n@return uint256 representing the total amount of tokens\r",
+            "documentation": "@dev Gets the total amount of tokens stored by the contract.\n@return uint256 representing the total amount of tokens",
             "id": 1023,
             "implemented": true,
             "kind": "function",
@@ -13925,7 +13963,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the token ID at a given index of all the tokens in this contract\r\nReverts if the index is greater or equal to the total number of tokens.\r\n@param index uint256 representing the index to be accessed of the tokens list\r\n@return uint256 token ID at the given index of the tokens list\r",
+            "documentation": "@dev Gets the token ID at a given index of all the tokens in this contract\nReverts if the index is greater or equal to the total number of tokens.\n@param index uint256 representing the index to be accessed of the tokens list\n@return uint256 token ID at the given index of the tokens list",
             "id": 1043,
             "implemented": true,
             "kind": "function",
@@ -14075,7 +14113,7 @@
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1611,
+                        "referencedDeclaration": 1612,
                         "src": "28488:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_super$_ERC721Enumerable_$1288",
@@ -14258,7 +14296,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to transfer ownership of a given token ID to another address.\r\nAs opposed to transferFrom, this imposes no restrictions on msg.sender.\r\n@param from current owner of the token\r\n@param to address to receive the ownership of the given token ID\r\n@param tokenId uint256 ID of the token to be transferred\r",
+            "documentation": "@dev Internal function to transfer ownership of a given token ID to another address.\nAs opposed to transferFrom, this imposes no restrictions on msg.sender.\n@param from current owner of the token\n@param to address to receive the ownership of the given token ID\n@param tokenId uint256 ID of the token to be transferred",
             "id": 1071,
             "implemented": true,
             "kind": "function",
@@ -14418,7 +14456,7 @@
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1611,
+                        "referencedDeclaration": 1612,
                         "src": "28976:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_super$_ERC721Enumerable_$1288",
@@ -14584,7 +14622,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to mint a new token.\r\nReverts if the given token ID already exists.\r\n@param to address the beneficiary that will own the minted token\r\n@param tokenId uint256 ID of the token to be minted\r",
+            "documentation": "@dev Internal function to mint a new token.\nReverts if the given token ID already exists.\n@param to address the beneficiary that will own the minted token\n@param tokenId uint256 ID of the token to be minted",
             "id": 1095,
             "implemented": true,
             "kind": "function",
@@ -14717,7 +14755,7 @@
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1611,
+                        "referencedDeclaration": 1612,
                         "src": "29465:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_super$_ERC721Enumerable_$1288",
@@ -14961,7 +14999,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to burn a specific token.\r\nReverts if the token does not exist.\r\nDeprecated, use _burn(uint256) instead.\r\n@param owner owner of the token to burn\r\n@param tokenId uint256 ID of the token being burned\r",
+            "documentation": "@dev Internal function to burn a specific token.\nReverts if the token does not exist.\nDeprecated, use _burn(uint256) instead.\n@param owner owner of the token to burn\n@param tokenId uint256 ID of the token being burned",
             "id": 1125,
             "implemented": true,
             "kind": "function",
@@ -15094,7 +15132,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the list of token IDs of the requested owner.\r\n@param owner address owning the tokens\r\n@return uint256[] List of token IDs owned by the requested address\r",
+            "documentation": "@dev Gets the list of token IDs of the requested owner.\n@param owner address owning the tokens\n@return uint256[] List of token IDs owned by the requested address",
             "id": 1138,
             "implemented": true,
             "kind": "function",
@@ -15405,7 +15443,7 @@
                 }
               ]
             },
-            "documentation": "@dev Private function to add a token to this extension's ownership-tracking data structures.\r\n@param to address representing the new owner of the given token ID\r\n@param tokenId uint256 ID of the token to be added to the tokens list of the given address\r",
+            "documentation": "@dev Private function to add a token to this extension's ownership-tracking data structures.\n@param to address representing the new owner of the given token ID\n@param tokenId uint256 ID of the token to be added to the tokens list of the given address",
             "id": 1162,
             "implemented": true,
             "kind": "function",
@@ -15651,7 +15689,7 @@
                 }
               ]
             },
-            "documentation": "@dev Private function to add a token to this extension's token tracking data structures.\r\n@param tokenId uint256 ID of the token to be added to the tokens list\r",
+            "documentation": "@dev Private function to add a token to this extension's token tracking data structures.\n@param tokenId uint256 ID of the token to be added to the tokens list",
             "id": 1181,
             "implemented": true,
             "kind": "function",
@@ -16347,7 +16385,7 @@
                 }
               ]
             },
-            "documentation": "@dev Private function to remove a token from this extension's ownership-tracking data structures. Note that\r\nwhile the token is not assigned a new owner, the _ownedTokensIndex mapping is _not_ updated: this allows for\r\ngas optimizations e.g. when performing a transfer operation (avoiding double writes).\r\nThis has O(1) time complexity, but alters the order of the _ownedTokens array.\r\n@param from address representing the previous owner of the given token ID\r\n@param tokenId uint256 ID of the token to be removed from the tokens list of the given address\r",
+            "documentation": "@dev Private function to remove a token from this extension's ownership-tracking data structures. Note that\nwhile the token is not assigned a new owner, the _ownedTokensIndex mapping is _not_ updated: this allows for\ngas optimizations e.g. when performing a transfer operation (avoiding double writes).\nThis has O(1) time complexity, but alters the order of the _ownedTokens array.\n@param from address representing the previous owner of the given token ID\n@param tokenId uint256 ID of the token to be removed from the tokens list of the given address",
             "id": 1238,
             "implemented": true,
             "kind": "function",
@@ -16982,7 +17020,7 @@
                 }
               ]
             },
-            "documentation": "@dev Private function to remove a token from this extension's token tracking data structures.\r\nThis has O(1) time complexity, but alters the order of the _allTokens array.\r\n@param tokenId uint256 ID of the token to be removed from the tokens list\r",
+            "documentation": "@dev Private function to remove a token from this extension's token tracking data structures.\nThis has O(1) time complexity, but alters the order of the _allTokens array.\n@param tokenId uint256 ID of the token to be removed from the tokens list",
             "id": 1287,
             "implemented": true,
             "kind": "function",
@@ -17075,7 +17113,7 @@
           110
         ],
         "contractKind": "contract",
-        "documentation": "@title ERC-721 Non-Fungible Token Standard, optional metadata extension\r\n@dev See https://eips.ethereum.org/EIPS/eip-721\r",
+        "documentation": "@title ERC-721 Non-Fungible Token Standard, optional metadata extension\n@dev See https://eips.ethereum.org/EIPS/eip-721",
         "fullyImplemented": false,
         "id": 1309,
         "linearizedBaseContracts": [
@@ -17348,10 +17386,10 @@
           }
         ],
         "contractDependencies": [
-          930,
           9,
           110,
           372,
+          930,
           1309
         ],
         "contractKind": "contract",
@@ -17663,7 +17701,7 @@
                 }
               ]
             },
-            "documentation": "@dev Constructor function\r",
+            "documentation": "@dev Constructor function",
             "id": 1347,
             "implemented": true,
             "kind": "constructor",
@@ -17768,7 +17806,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the token name.\r\n@return string representing the token name\r",
+            "documentation": "@dev Gets the token name.\n@return string representing the token name",
             "id": 1355,
             "implemented": true,
             "kind": "function",
@@ -17847,7 +17885,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the token symbol.\r\n@return string representing the token symbol\r",
+            "documentation": "@dev Gets the token symbol.\n@return string representing the token symbol",
             "id": 1363,
             "implemented": true,
             "kind": "function",
@@ -18068,7 +18106,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns an URI for a given token ID.\r\nThrows if the token ID does not exist. May return an empty string.\r\n@param tokenId uint256 ID of the token to query\r",
+            "documentation": "@dev Returns an URI for a given token ID.\nThrows if the token ID does not exist. May return an empty string.\n@param tokenId uint256 ID of the token to query",
             "id": 1382,
             "implemented": true,
             "kind": "function",
@@ -18343,7 +18381,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to set the token URI for a given token.\r\nReverts if the token ID does not exist.\r\n@param tokenId uint256 ID of the token to set its URI\r\n@param uri string URI to assign\r",
+            "documentation": "@dev Internal function to set the token URI for a given token.\nReverts if the token ID does not exist.\n@param tokenId uint256 ID of the token to set its URI\n@param uri string URI to assign",
             "id": 1403,
             "implemented": true,
             "kind": "function",
@@ -18475,7 +18513,7 @@
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1615,
+                        "referencedDeclaration": 1616,
                         "src": "37235:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_super$_ERC721Metadata_$1434",
@@ -18721,7 +18759,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to burn a specific token.\r\nReverts if the token does not exist.\r\nDeprecated, use _burn(uint256) instead.\r\n@param owner owner of the token to burn\r\n@param tokenId uint256 ID of the token being burned by the msg.sender\r",
+            "documentation": "@dev Internal function to burn a specific token.\nReverts if the token does not exist.\nDeprecated, use _burn(uint256) instead.\n@param owner owner of the token to burn\n@param tokenId uint256 ID of the token being burned by the msg.sender",
             "id": 1433,
             "implemented": true,
             "kind": "function",
@@ -18873,17 +18911,17 @@
           }
         ],
         "contractDependencies": [
-          930,
-          955,
-          1288,
           9,
           110,
           372,
+          930,
+          955,
+          1288,
           1309,
           1434
         ],
         "contractKind": "contract",
-        "documentation": "@title Full ERC721 Token\r\nThis implementation includes all the required and some optional functionality of the ERC721 standard\r\nMoreover, it includes approve all functionality using operator terminology\r\n@dev see https://eips.ethereum.org/EIPS/eip-721\r",
+        "documentation": "@title Full ERC721 Token\nThis implementation includes all the required and some optional functionality of the ERC721 standard\nMoreover, it includes approve all functionality using operator terminology\n@dev see https://eips.ethereum.org/EIPS/eip-721",
         "fullyImplemented": true,
         "id": 1454,
         "linearizedBaseContracts": [
@@ -19100,7 +19138,7 @@
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "interface",
-        "documentation": "@dev Interface of the ERC165 standard, as defined in the\r\n[EIP](https://eips.ethereum.org/EIPS/eip-165).\r\n\n * Implementers can declare support of contract interfaces, which can then be\r\nqueried by others (`ERC165Checker`).\r\n\n * For an implementation, see `ERC165`.\r",
+        "documentation": "@dev Interface of the ERC165 standard, as defined in the\n[EIP](https://eips.ethereum.org/EIPS/eip-165).\n\n * Implementers can declare support of contract interfaces, which can then be\nqueried by others (`ERC165Checker`).\n\n * For an implementation, see `ERC165`.",
         "fullyImplemented": false,
         "id": 9,
         "linearizedBaseContracts": [
@@ -19111,7 +19149,7 @@
         "nodes": [
           {
             "body": null,
-            "documentation": "@dev Returns true if this contract implements the interface defined by\r\n`interfaceId`. See the corresponding\r\n[EIP section](https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified)\r\nto learn more about how these ids are created.\r\n\n     * This function call must use less than 30 000 gas.\r",
+            "documentation": "@dev Returns true if this contract implements the interface defined by\n`interfaceId`. See the corresponding\n[EIP section](https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified)\nto learn more about how these ids are created.\n\n     * This function call must use less than 30 000 gas.",
             "id": 8,
             "implemented": false,
             "kind": "function",
@@ -19230,7 +19268,7 @@
           9
         ],
         "contractKind": "contract",
-        "documentation": "@dev Required interface of an ERC721 compliant contract.\r",
+        "documentation": "@dev Required interface of an ERC721 compliant contract.",
         "fullyImplemented": false,
         "id": 110,
         "linearizedBaseContracts": [
@@ -19536,7 +19574,7 @@
           },
           {
             "body": null,
-            "documentation": "@dev Returns the number of NFTs in `owner`'s account.\r",
+            "documentation": "@dev Returns the number of NFTs in `owner`'s account.",
             "id": 43,
             "implemented": false,
             "kind": "function",
@@ -19618,7 +19656,7 @@
           },
           {
             "body": null,
-            "documentation": "@dev Returns the owner of the NFT specified by `tokenId`.\r",
+            "documentation": "@dev Returns the owner of the NFT specified by `tokenId`.",
             "id": 50,
             "implemented": false,
             "kind": "function",
@@ -19700,7 +19738,7 @@
           },
           {
             "body": null,
-            "documentation": "@dev Transfers a specific NFT (`tokenId`) from one account (`from`) to\r\nanother (`to`).\r\n\n     * \r\n\n     * Requirements:\r\n- `from`, `to` cannot be zero.\r\n- `tokenId` must be owned by `from`.\r\n- If the caller is not `from`, it must be have been allowed to move this\r\nNFT by either `approve` or `setApproveForAll`.\r",
+            "documentation": "@dev Transfers a specific NFT (`tokenId`) from one account (`from`) to\nanother (`to`).\n\n     * \n\n     * Requirements:\n- `from`, `to` cannot be zero.\n- `tokenId` must be owned by `from`.\n- If the caller is not `from`, it must be have been allowed to move this\nNFT by either `approve` or `setApproveForAll`.",
             "id": 59,
             "implemented": false,
             "kind": "function",
@@ -19808,7 +19846,7 @@
           },
           {
             "body": null,
-            "documentation": "@dev Transfers a specific NFT (`tokenId`) from one account (`from`) to\r\nanother (`to`).\r\n\n     * Requirements:\r\n- If the caller is not `from`, it must be approved to move this NFT by\r\neither `approve` or `setApproveForAll`.\r",
+            "documentation": "@dev Transfers a specific NFT (`tokenId`) from one account (`from`) to\nanother (`to`).\n\n     * Requirements:\n- If the caller is not `from`, it must be approved to move this NFT by\neither `approve` or `setApproveForAll`.",
             "id": 68,
             "implemented": false,
             "kind": "function",
@@ -20420,7 +20458,7 @@
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
-        "documentation": "@title ERC721 token receiver interface\r\n@dev Interface for any contract that wants to support safeTransfers\r\nfrom ERC721 asset contracts.\r",
+        "documentation": "@title ERC721 token receiver interface\n@dev Interface for any contract that wants to support safeTransfers\nfrom ERC721 asset contracts.",
         "fullyImplemented": false,
         "id": 125,
         "linearizedBaseContracts": [
@@ -20431,7 +20469,7 @@
         "nodes": [
           {
             "body": null,
-            "documentation": "@notice Handle the receipt of an NFT\r\n@dev The ERC721 smart contract calls this function on the recipient\r\nafter a `safeTransfer`. This function MUST return the function selector,\r\notherwise the caller will revert the transaction. The selector to be\r\nreturned can be obtained as `this.onERC721Received.selector`. This\r\nfunction MAY throw to revert and reject the transfer.\r\nNote: the ERC721 contract address is always the message sender.\r\n@param operator The address which called `safeTransferFrom` function\r\n@param from The address which previously owned the token\r\n@param tokenId The NFT identifier which is being transferred\r\n@param data Additional data with no specified format\r\n@return bytes4 `bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`\r",
+            "documentation": "@notice Handle the receipt of an NFT\n@dev The ERC721 smart contract calls this function on the recipient\nafter a `safeTransfer`. This function MUST return the function selector,\notherwise the caller will revert the transaction. The selector to be\nreturned can be obtained as `this.onERC721Received.selector`. This\nfunction MAY throw to revert and reject the transfer.\nNote: the ERC721 contract address is always the message sender.\n@param operator The address which called `safeTransferFrom` function\n@param from The address which previously owned the token\n@param tokenId The NFT identifier which is being transferred\n@param data Additional data with no specified format\n@return bytes4 `bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`",
             "id": 124,
             "implemented": false,
             "kind": "function",
@@ -20609,7 +20647,7 @@
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "library",
-        "documentation": "@dev Wrappers over Solidity's arithmetic operations with added overflow\r\nchecks.\r\n\n * Arithmetic operations in Solidity wrap on overflow. This can easily result\r\nin bugs, because programmers usually assume that an overflow raises an\r\nerror, which is the standard behavior in high level programming languages.\r\n`SafeMath` restores this intuition by reverting the transaction when an\r\noperation overflows.\r\n\n * Using this library instead of the unchecked operations eliminates an entire\r\nclass of bugs, so it's recommended to use it always.\r",
+        "documentation": "@dev Wrappers over Solidity's arithmetic operations with added overflow\nchecks.\n\n * Arithmetic operations in Solidity wrap on overflow. This can easily result\nin bugs, because programmers usually assume that an overflow raises an\nerror, which is the standard behavior in high level programming languages.\n`SafeMath` restores this intuition by reverting the transaction when an\noperation overflows.\n\n * Using this library instead of the unchecked operations eliminates an entire\nclass of bugs, so it's recommended to use it always.",
         "fullyImplemented": true,
         "id": 257,
         "linearizedBaseContracts": [
@@ -20837,7 +20875,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns the addition of two unsigned integers, reverting on\r\noverflow.\r\n\n     * Counterpart to Solidity's `+` operator.\r\n\n     * Requirements:\r\n- Addition cannot overflow.\r",
+            "documentation": "@dev Returns the addition of two unsigned integers, reverting on\noverflow.\n\n     * Counterpart to Solidity's `+` operator.\n\n     * Requirements:\n- Addition cannot overflow.",
             "id": 151,
             "implemented": true,
             "kind": "function",
@@ -21161,7 +21199,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns the subtraction of two unsigned integers, reverting on\r\noverflow (when the result is negative).\r\n\n     * Counterpart to Solidity's `-` operator.\r\n\n     * Requirements:\r\n- Subtraction cannot overflow.\r",
+            "documentation": "@dev Returns the subtraction of two unsigned integers, reverting on\noverflow (when the result is negative).\n\n     * Counterpart to Solidity's `-` operator.\n\n     * Requirements:\n- Subtraction cannot overflow.",
             "id": 176,
             "implemented": true,
             "kind": "function",
@@ -21604,7 +21642,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns the multiplication of two unsigned integers, reverting on\r\noverflow.\r\n\n     * Counterpart to Solidity's `*` operator.\r\n\n     * Requirements:\r\n- Multiplication cannot overflow.\r",
+            "documentation": "@dev Returns the multiplication of two unsigned integers, reverting on\noverflow.\n\n     * Counterpart to Solidity's `*` operator.\n\n     * Requirements:\n- Multiplication cannot overflow.",
             "id": 210,
             "implemented": true,
             "kind": "function",
@@ -21933,7 +21971,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns the integer division of two unsigned integers. Reverts on\r\ndivision by zero. The result is rounded towards zero.\r\n\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\r\n`revert` opcode (which leaves remaining gas untouched) while Solidity\r\nuses an invalid opcode to revert (consuming all remaining gas).\r\n\n     * Requirements:\r\n- The divisor cannot be zero.\r",
+            "documentation": "@dev Returns the integer division of two unsigned integers. Reverts on\ndivision by zero. The result is rounded towards zero.\n\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\n`revert` opcode (which leaves remaining gas untouched) while Solidity\nuses an invalid opcode to revert (consuming all remaining gas).\n\n     * Requirements:\n- The divisor cannot be zero.",
             "id": 235,
             "implemented": true,
             "kind": "function",
@@ -22213,7 +22251,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\r\nReverts when dividing by zero.\r\n\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\r\nopcode (which leaves remaining gas untouched) while Solidity uses an\r\ninvalid opcode to revert (consuming all remaining gas).\r\n\n     * Requirements:\r\n- The divisor cannot be zero.\r",
+            "documentation": "@dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\nReverts when dividing by zero.\n\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\nopcode (which leaves remaining gas untouched) while Solidity uses an\ninvalid opcode to revert (consuming all remaining gas).\n\n     * Requirements:\n- The divisor cannot be zero.",
             "id": 256,
             "implemented": true,
             "kind": "function",
@@ -22337,7 +22375,7 @@
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "library",
-        "documentation": "@dev Collection of functions related to the address type,\r",
+        "documentation": "@dev Collection of functions related to the address type,",
         "fullyImplemented": true,
         "id": 275,
         "linearizedBaseContracts": [
@@ -22392,15 +22430,6 @@
                 {
                   "externalReferences": [
                     {
-                      "account": {
-                        "declaration": 260,
-                        "isOffset": false,
-                        "isSlot": false,
-                        "src": "8852:7:0",
-                        "valueSize": 1
-                      }
-                    },
-                    {
                       "size": {
                         "declaration": 266,
                         "isOffset": false,
@@ -22408,12 +22437,21 @@
                         "src": "8832:4:0",
                         "valueSize": 1
                       }
+                    },
+                    {
+                      "account": {
+                        "declaration": 260,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "8852:7:0",
+                        "valueSize": 1
+                      }
                     }
                   ],
                   "id": 268,
                   "nodeType": "InlineAssembly",
-                  "operations": "{\n    size := extcodesize(account)\n}",
-                  "src": "8821:57:0"
+                  "operations": "{ size := extcodesize(account) }",
+                  "src": "8821:41:0"
                 },
                 {
                   "expression": {
@@ -22473,7 +22511,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns true if `account` is a contract.\r\n\n     * This test is non-exhaustive, and there may be false-negatives: during the\r\nexecution of a contract's constructor, its address will be reported as\r\nnot containing a contract.\r\n\n     * > It is unsafe to assume that an address for which this function returns\r\nfalse is an externally-owned account (EOA) and not a contract.\r",
+            "documentation": "@dev Returns true if `account` is a contract.\n\n     * This test is non-exhaustive, and there may be false-negatives: during the\nexecution of a contract's constructor, its address will be reported as\nnot containing a contract.\n\n     * > It is unsafe to assume that an address for which this function returns\nfalse is an externally-owned account (EOA) and not a contract.",
             "id": 274,
             "implemented": true,
             "kind": "function",
@@ -22572,7 +22610,7 @@
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "library",
-        "documentation": "@title Counters\r\n@author Matt Condon (@shrugs)\r\n@dev Provides counters that can only be incremented or decremented by one. This can be used e.g. to track the number\r\nof elements in a mapping, issuing ERC721 ids, or counting request ids.\r\n\n * Include with `using Counters for Counters.Counter;`\r\nSince it is not possible to overflow a 256 bit integer with increments of one, `increment` can skip the SafeMath\r\noverflow check, thereby saving gas. This does assume however correct usage, in that the underlying `_value` is never\r\ndirectly accessed.\r",
+        "documentation": "@title Counters\n@author Matt Condon (@shrugs)\n@dev Provides counters that can only be incremented or decremented by one. This can be used e.g. to track the number\nof elements in a mapping, issuing ERC721 ids, or counting request ids.\n\n * Include with `using Counters for Counters.Counter;`\nSince it is not possible to overflow a 256 bit integer with increments of one, `increment` can skip the SafeMath\noverflow check, thereby saving gas. This does assume however correct usage, in that the underlying `_value` is never\ndirectly accessed.",
         "fullyImplemented": true,
         "id": 322,
         "linearizedBaseContracts": [
@@ -23135,7 +23173,7 @@
           9
         ],
         "contractKind": "contract",
-        "documentation": "@dev Implementation of the `IERC165` interface.\r\n\n * Contracts may inherit from this and call `_registerInterface` to declare\r\ntheir support of an interface.\r",
+        "documentation": "@dev Implementation of the `IERC165` interface.\n\n * Contracts may inherit from this and call `_registerInterface` to declare\ntheir support of an interface.",
         "fullyImplemented": true,
         "id": 372,
         "linearizedBaseContracts": [
@@ -23374,7 +23412,7 @@
                 }
               ]
             },
-            "documentation": "@dev See `IERC165.supportsInterface`.\r\n\n     * Time complexity O(1), guaranteed to always use less than 30 000 gas.\r",
+            "documentation": "@dev See `IERC165.supportsInterface`.\n\n     * Time complexity O(1), guaranteed to always use less than 30 000 gas.",
             "id": 352,
             "implemented": true,
             "kind": "function",
@@ -23655,7 +23693,7 @@
                 }
               ]
             },
-            "documentation": "@dev Registers the contract as an implementer of the interface defined by\r\n`interfaceId`. Support of the actual ERC165 interface is automatic and\r\nregistering its interface id is not required.\r\n\n     * See `IERC165.supportsInterface`.\r\n\n     * Requirements:\r\n\n     * - `interfaceId` cannot be the ERC165 invalid interface (`0xffffffff`).\r",
+            "documentation": "@dev Registers the contract as an implementer of the interface defined by\n`interfaceId`. Support of the actual ERC165 interface is automatic and\nregistering its interface id is not required.\n\n     * See `IERC165.supportsInterface`.\n\n     * Requirements:\n\n     * - `interfaceId` cannot be the ERC165 invalid interface (`0xffffffff`).",
             "id": 371,
             "implemented": true,
             "kind": "function",
@@ -23767,7 +23805,7 @@
           372
         ],
         "contractKind": "contract",
-        "documentation": "@title ERC721 Non-Fungible Token Standard basic implementation\r\n@dev see https://eips.ethereum.org/EIPS/eip-721\r",
+        "documentation": "@title ERC721 Non-Fungible Token Standard basic implementation\n@dev see https://eips.ethereum.org/EIPS/eip-721",
         "fullyImplemented": true,
         "id": 930,
         "linearizedBaseContracts": [
@@ -24480,7 +24518,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the balance of the specified address.\r\n@param owner address to query the balance of\r\n@return uint256 representing the amount owned by the passed address\r",
+            "documentation": "@dev Gets the balance of the specified address.\n@param owner address to query the balance of\n@return uint256 representing the amount owned by the passed address",
             "id": 441,
             "implemented": true,
             "kind": "function",
@@ -24818,7 +24856,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the owner of the specified token ID.\r\n@param tokenId uint256 ID of the token to query the owner of\r\n@return address currently marked as the owner of the given token ID\r",
+            "documentation": "@dev Gets the owner of the specified token ID.\n@param tokenId uint256 ID of the token to query the owner of\n@return address currently marked as the owner of the given token ID",
             "id": 466,
             "implemented": true,
             "kind": "function",
@@ -25496,7 +25534,7 @@
                 }
               ]
             },
-            "documentation": "@dev Approves another address to transfer the given token ID\r\nThe zero address indicates there is no approved address.\r\nThere can only be one approved address per token at a given time.\r\nCan only be called by the token owner or an approved operator.\r\n@param to address to be approved for the given token ID\r\n@param tokenId uint256 ID of the token to be approved\r",
+            "documentation": "@dev Approves another address to transfer the given token ID\nThe zero address indicates there is no approved address.\nThere can only be one approved address per token at a given time.\nCan only be called by the token owner or an approved operator.\n@param to address to be approved for the given token ID\n@param tokenId uint256 ID of the token to be approved",
             "id": 513,
             "implemented": true,
             "kind": "function",
@@ -25744,7 +25782,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the approved address for a token ID, or zero if no address set\r\nReverts if the token ID does not exist.\r\n@param tokenId uint256 ID of the token to query the approval of\r\n@return address currently approved for the given token ID\r",
+            "documentation": "@dev Gets the approved address for a token ID, or zero if no address set\nReverts if the token ID does not exist.\n@param tokenId uint256 ID of the token to query the approval of\n@return address currently approved for the given token ID",
             "id": 532,
             "implemented": true,
             "kind": "function",
@@ -26179,7 +26217,7 @@
                 }
               ]
             },
-            "documentation": "@dev Sets or unsets the approval of a given operator\r\nAn operator is allowed to transfer all tokens of the sender on their behalf.\r\n@param to operator address to set the approval\r\n@param approved representing the status of the approval to be set\r",
+            "documentation": "@dev Sets or unsets the approval of a given operator\nAn operator is allowed to transfer all tokens of the sender on their behalf.\n@param to operator address to set the approval\n@param approved representing the status of the approval to be set",
             "id": 564,
             "implemented": true,
             "kind": "function",
@@ -26339,7 +26377,7 @@
                 }
               ]
             },
-            "documentation": "@dev Tells whether an operator is approved by a given owner.\r\n@param owner owner address which you want to query the approval of\r\n@param operator operator address which you want to query the approval of\r\n@return bool whether the given operator is approved by the given owner\r",
+            "documentation": "@dev Tells whether an operator is approved by a given owner.\n@param owner owner address which you want to query the approval of\n@param operator operator address which you want to query the approval of\n@return bool whether the given operator is approved by the given owner",
             "id": 580,
             "implemented": true,
             "kind": "function",
@@ -26690,7 +26728,7 @@
                 }
               ]
             },
-            "documentation": "@dev Transfers the ownership of a given token ID to another address.\r\nUsage of this method is discouraged, use `safeTransferFrom` whenever possible.\r\nRequires the msg.sender to be the owner, approved, or operator.\r\n@param from current owner of the token\r\n@param to address to receive the ownership of the given token ID\r\n@param tokenId uint256 ID of the token to be transferred\r",
+            "documentation": "@dev Transfers the ownership of a given token ID to another address.\nUsage of this method is discouraged, use `safeTransferFrom` whenever possible.\nRequires the msg.sender to be the owner, approved, or operator.\n@param from current owner of the token\n@param to address to receive the ownership of the given token ID\n@param tokenId uint256 ID of the token to be transferred",
             "id": 605,
             "implemented": true,
             "kind": "function",
@@ -26917,7 +26955,7 @@
                 }
               ]
             },
-            "documentation": "@dev Safely transfers the ownership of a given token ID to another address\r\nIf the target address is a contract, it must implement `onERC721Received`,\r\nwhich is called upon a safe transfer, and return the magic value\r\n`bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`; otherwise,\r\nthe transfer is reverted.\r\nRequires the msg.sender to be the owner, approved, or operator\r\n@param from current owner of the token\r\n@param to address to receive the ownership of the given token ID\r\n@param tokenId uint256 ID of the token to be transferred\r",
+            "documentation": "@dev Safely transfers the ownership of a given token ID to another address\nIf the target address is a contract, it must implement `onERC721Received`,\nwhich is called upon a safe transfer, and return the magic value\n`bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`; otherwise,\nthe transfer is reverted.\nRequires the msg.sender to be the owner, approved, or operator\n@param from current owner of the token\n@param to address to receive the ownership of the given token ID\n@param tokenId uint256 ID of the token to be transferred",
             "id": 622,
             "implemented": true,
             "kind": "function",
@@ -27287,7 +27325,7 @@
                 }
               ]
             },
-            "documentation": "@dev Safely transfers the ownership of a given token ID to another address\r\nIf the target address is a contract, it must implement `onERC721Received`,\r\nwhich is called upon a safe transfer, and return the magic value\r\n`bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`; otherwise,\r\nthe transfer is reverted.\r\nRequires the msg.sender to be the owner, approved, or operator\r\n@param from current owner of the token\r\n@param to address to receive the ownership of the given token ID\r\n@param tokenId uint256 ID of the token to be transferred\r\n@param _data bytes data to send along with a safe transfer check\r",
+            "documentation": "@dev Safely transfers the ownership of a given token ID to another address\nIf the target address is a contract, it must implement `onERC721Received`,\nwhich is called upon a safe transfer, and return the magic value\n`bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`; otherwise,\nthe transfer is reverted.\nRequires the msg.sender to be the owner, approved, or operator\n@param from current owner of the token\n@param to address to receive the ownership of the given token ID\n@param tokenId uint256 ID of the token to be transferred\n@param _data bytes data to send along with a safe transfer check",
             "id": 650,
             "implemented": true,
             "kind": "function",
@@ -27598,7 +27636,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns whether the specified token exists.\r\n@param tokenId uint256 ID of the token to query the existence of\r\n@return bool whether the token exists\r",
+            "documentation": "@dev Returns whether the specified token exists.\n@param tokenId uint256 ID of the token to query the existence of\n@return bool whether the token exists",
             "id": 670,
             "implemented": true,
             "kind": "function",
@@ -28145,7 +28183,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns whether the given spender can transfer a given token ID.\r\n@param spender address of the spender to query\r\n@param tokenId uint256 ID of the token to be transferred\r\n@return bool whether the msg.sender is approved for the given token ID,\r\nis an operator of the owner, or is the owner of the token\r",
+            "documentation": "@dev Returns whether the given spender can transfer a given token ID.\n@param spender address of the spender to query\n@param tokenId uint256 ID of the token to be transferred\n@return bool whether the msg.sender is approved for the given token ID,\nis an operator of the owner, or is the owner of the token",
             "id": 709,
             "implemented": true,
             "kind": "function",
@@ -28826,7 +28864,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to mint a new token.\r\nReverts if the given token ID already exists.\r\n@param to The address that will own the minted token\r\n@param tokenId uint256 ID of the token to be minted\r",
+            "documentation": "@dev Internal function to mint a new token.\nReverts if the given token ID already exists.\n@param to The address that will own the minted token\n@param tokenId uint256 ID of the token to be minted",
             "id": 754,
             "implemented": true,
             "kind": "function",
@@ -29441,7 +29479,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to burn a specific token.\r\nReverts if the token does not exist.\r\nDeprecated, use _burn(uint256) instead.\r\n@param owner owner of the token to burn\r\n@param tokenId uint256 ID of the token being burned\r",
+            "documentation": "@dev Internal function to burn a specific token.\nReverts if the token does not exist.\nDeprecated, use _burn(uint256) instead.\n@param owner owner of the token to burn\n@param tokenId uint256 ID of the token being burned",
             "id": 797,
             "implemented": true,
             "kind": "function",
@@ -29640,7 +29678,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to burn a specific token.\r\nReverts if the token does not exist.\r\n@param tokenId uint256 ID of the token being burned\r",
+            "documentation": "@dev Internal function to burn a specific token.\nReverts if the token does not exist.\n@param tokenId uint256 ID of the token being burned",
             "id": 810,
             "implemented": true,
             "kind": "function",
@@ -30374,7 +30412,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to transfer ownership of a given token ID to another address.\r\nAs opposed to transferFrom, this imposes no restrictions on msg.sender.\r\n@param from current owner of the token\r\n@param to address to receive the ownership of the given token ID\r\n@param tokenId uint256 ID of the token to be transferred\r",
+            "documentation": "@dev Internal function to transfer ownership of a given token ID to another address.\nAs opposed to transferFrom, this imposes no restrictions on msg.sender.\n@param from current owner of the token\n@param to address to receive the ownership of the given token ID\n@param tokenId uint256 ID of the token to be transferred",
             "id": 866,
             "implemented": true,
             "kind": "function",
@@ -30859,7 +30897,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to invoke `onERC721Received` on a target address.\r\nThe call is not executed if the target address is not a contract.\r\n\n     * This function is deprecated.\r\n@param from address representing the previous owner of the given token ID\r\n@param to target address that will receive the tokens\r\n@param tokenId uint256 ID of the token to be transferred\r\n@param _data bytes optional data to send along with the call\r\n@return bool whether the call correctly returned the expected magic value\r",
+            "documentation": "@dev Internal function to invoke `onERC721Received` on a target address.\nThe call is not executed if the target address is not a contract.\n\n     * This function is deprecated.\n@param from address representing the previous owner of the given token ID\n@param to target address that will receive the tokens\n@param tokenId uint256 ID of the token to be transferred\n@param _data bytes optional data to send along with the call\n@return bool whether the call correctly returned the expected magic value",
             "id": 906,
             "implemented": true,
             "kind": "function",
@@ -31270,7 +31308,7 @@
                 }
               ]
             },
-            "documentation": "@dev Private function to clear current approval of a given token ID.\r\n@param tokenId uint256 ID of the token to be transferred\r",
+            "documentation": "@dev Private function to clear current approval of a given token ID.\n@param tokenId uint256 ID of the token to be transferred",
             "id": 929,
             "implemented": true,
             "kind": "function",
@@ -31363,7 +31401,7 @@
           110
         ],
         "contractKind": "contract",
-        "documentation": "@title ERC-721 Non-Fungible Token Standard, optional enumeration extension\r\n@dev See https://eips.ethereum.org/EIPS/eip-721\r",
+        "documentation": "@title ERC-721 Non-Fungible Token Standard, optional enumeration extension\n@dev See https://eips.ethereum.org/EIPS/eip-721",
         "fullyImplemented": false,
         "id": 955,
         "linearizedBaseContracts": [
@@ -31690,14 +31728,14 @@
           }
         ],
         "contractDependencies": [
-          930,
-          955,
           9,
           110,
-          372
+          372,
+          930,
+          955
         ],
         "contractKind": "contract",
-        "documentation": "@title ERC-721 Non-Fungible Token with optional enumeration extension logic\r\n@dev See https://eips.ethereum.org/EIPS/eip-721\r",
+        "documentation": "@title ERC-721 Non-Fungible Token with optional enumeration extension logic\n@dev See https://eips.ethereum.org/EIPS/eip-721",
         "fullyImplemented": true,
         "id": 1288,
         "linearizedBaseContracts": [
@@ -31997,7 +32035,7 @@
                 }
               ]
             },
-            "documentation": "@dev Constructor function.\r",
+            "documentation": "@dev Constructor function.",
             "id": 989,
             "implemented": true,
             "kind": "constructor",
@@ -32252,7 +32290,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the token ID at a given index of the tokens list of the requested owner.\r\n@param owner address owning the tokens list to be accessed\r\n@param index uint256 representing the index to be accessed of the requested tokens list\r\n@return uint256 token ID at the given index of the tokens list owned by the requested address\r",
+            "documentation": "@dev Gets the token ID at a given index of the tokens list of the requested owner.\n@param owner address owning the tokens list to be accessed\n@param index uint256 representing the index to be accessed of the requested tokens list\n@return uint256 token ID at the given index of the tokens list owned by the requested address",
             "id": 1014,
             "implemented": true,
             "kind": "function",
@@ -32401,7 +32439,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the total amount of tokens stored by the contract.\r\n@return uint256 representing the total amount of tokens\r",
+            "documentation": "@dev Gets the total amount of tokens stored by the contract.\n@return uint256 representing the total amount of tokens",
             "id": 1023,
             "implemented": true,
             "kind": "function",
@@ -32637,7 +32675,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the token ID at a given index of all the tokens in this contract\r\nReverts if the index is greater or equal to the total number of tokens.\r\n@param index uint256 representing the index to be accessed of the tokens list\r\n@return uint256 token ID at the given index of the tokens list\r",
+            "documentation": "@dev Gets the token ID at a given index of all the tokens in this contract\nReverts if the index is greater or equal to the total number of tokens.\n@param index uint256 representing the index to be accessed of the tokens list\n@return uint256 token ID at the given index of the tokens list",
             "id": 1043,
             "implemented": true,
             "kind": "function",
@@ -32787,7 +32825,7 @@
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1611,
+                        "referencedDeclaration": 1612,
                         "src": "28488:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_super$_ERC721Enumerable_$1288",
@@ -32970,7 +33008,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to transfer ownership of a given token ID to another address.\r\nAs opposed to transferFrom, this imposes no restrictions on msg.sender.\r\n@param from current owner of the token\r\n@param to address to receive the ownership of the given token ID\r\n@param tokenId uint256 ID of the token to be transferred\r",
+            "documentation": "@dev Internal function to transfer ownership of a given token ID to another address.\nAs opposed to transferFrom, this imposes no restrictions on msg.sender.\n@param from current owner of the token\n@param to address to receive the ownership of the given token ID\n@param tokenId uint256 ID of the token to be transferred",
             "id": 1071,
             "implemented": true,
             "kind": "function",
@@ -33130,7 +33168,7 @@
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1611,
+                        "referencedDeclaration": 1612,
                         "src": "28976:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_super$_ERC721Enumerable_$1288",
@@ -33296,7 +33334,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to mint a new token.\r\nReverts if the given token ID already exists.\r\n@param to address the beneficiary that will own the minted token\r\n@param tokenId uint256 ID of the token to be minted\r",
+            "documentation": "@dev Internal function to mint a new token.\nReverts if the given token ID already exists.\n@param to address the beneficiary that will own the minted token\n@param tokenId uint256 ID of the token to be minted",
             "id": 1095,
             "implemented": true,
             "kind": "function",
@@ -33429,7 +33467,7 @@
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1611,
+                        "referencedDeclaration": 1612,
                         "src": "29465:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_super$_ERC721Enumerable_$1288",
@@ -33673,7 +33711,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to burn a specific token.\r\nReverts if the token does not exist.\r\nDeprecated, use _burn(uint256) instead.\r\n@param owner owner of the token to burn\r\n@param tokenId uint256 ID of the token being burned\r",
+            "documentation": "@dev Internal function to burn a specific token.\nReverts if the token does not exist.\nDeprecated, use _burn(uint256) instead.\n@param owner owner of the token to burn\n@param tokenId uint256 ID of the token being burned",
             "id": 1125,
             "implemented": true,
             "kind": "function",
@@ -33806,7 +33844,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the list of token IDs of the requested owner.\r\n@param owner address owning the tokens\r\n@return uint256[] List of token IDs owned by the requested address\r",
+            "documentation": "@dev Gets the list of token IDs of the requested owner.\n@param owner address owning the tokens\n@return uint256[] List of token IDs owned by the requested address",
             "id": 1138,
             "implemented": true,
             "kind": "function",
@@ -34117,7 +34155,7 @@
                 }
               ]
             },
-            "documentation": "@dev Private function to add a token to this extension's ownership-tracking data structures.\r\n@param to address representing the new owner of the given token ID\r\n@param tokenId uint256 ID of the token to be added to the tokens list of the given address\r",
+            "documentation": "@dev Private function to add a token to this extension's ownership-tracking data structures.\n@param to address representing the new owner of the given token ID\n@param tokenId uint256 ID of the token to be added to the tokens list of the given address",
             "id": 1162,
             "implemented": true,
             "kind": "function",
@@ -34363,7 +34401,7 @@
                 }
               ]
             },
-            "documentation": "@dev Private function to add a token to this extension's token tracking data structures.\r\n@param tokenId uint256 ID of the token to be added to the tokens list\r",
+            "documentation": "@dev Private function to add a token to this extension's token tracking data structures.\n@param tokenId uint256 ID of the token to be added to the tokens list",
             "id": 1181,
             "implemented": true,
             "kind": "function",
@@ -35059,7 +35097,7 @@
                 }
               ]
             },
-            "documentation": "@dev Private function to remove a token from this extension's ownership-tracking data structures. Note that\r\nwhile the token is not assigned a new owner, the _ownedTokensIndex mapping is _not_ updated: this allows for\r\ngas optimizations e.g. when performing a transfer operation (avoiding double writes).\r\nThis has O(1) time complexity, but alters the order of the _ownedTokens array.\r\n@param from address representing the previous owner of the given token ID\r\n@param tokenId uint256 ID of the token to be removed from the tokens list of the given address\r",
+            "documentation": "@dev Private function to remove a token from this extension's ownership-tracking data structures. Note that\nwhile the token is not assigned a new owner, the _ownedTokensIndex mapping is _not_ updated: this allows for\ngas optimizations e.g. when performing a transfer operation (avoiding double writes).\nThis has O(1) time complexity, but alters the order of the _ownedTokens array.\n@param from address representing the previous owner of the given token ID\n@param tokenId uint256 ID of the token to be removed from the tokens list of the given address",
             "id": 1238,
             "implemented": true,
             "kind": "function",
@@ -35694,7 +35732,7 @@
                 }
               ]
             },
-            "documentation": "@dev Private function to remove a token from this extension's token tracking data structures.\r\nThis has O(1) time complexity, but alters the order of the _allTokens array.\r\n@param tokenId uint256 ID of the token to be removed from the tokens list\r",
+            "documentation": "@dev Private function to remove a token from this extension's token tracking data structures.\nThis has O(1) time complexity, but alters the order of the _allTokens array.\n@param tokenId uint256 ID of the token to be removed from the tokens list",
             "id": 1287,
             "implemented": true,
             "kind": "function",
@@ -35787,7 +35825,7 @@
           110
         ],
         "contractKind": "contract",
-        "documentation": "@title ERC-721 Non-Fungible Token Standard, optional metadata extension\r\n@dev See https://eips.ethereum.org/EIPS/eip-721\r",
+        "documentation": "@title ERC-721 Non-Fungible Token Standard, optional metadata extension\n@dev See https://eips.ethereum.org/EIPS/eip-721",
         "fullyImplemented": false,
         "id": 1309,
         "linearizedBaseContracts": [
@@ -36060,10 +36098,10 @@
           }
         ],
         "contractDependencies": [
-          930,
           9,
           110,
           372,
+          930,
           1309
         ],
         "contractKind": "contract",
@@ -36375,7 +36413,7 @@
                 }
               ]
             },
-            "documentation": "@dev Constructor function\r",
+            "documentation": "@dev Constructor function",
             "id": 1347,
             "implemented": true,
             "kind": "constructor",
@@ -36480,7 +36518,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the token name.\r\n@return string representing the token name\r",
+            "documentation": "@dev Gets the token name.\n@return string representing the token name",
             "id": 1355,
             "implemented": true,
             "kind": "function",
@@ -36559,7 +36597,7 @@
                 }
               ]
             },
-            "documentation": "@dev Gets the token symbol.\r\n@return string representing the token symbol\r",
+            "documentation": "@dev Gets the token symbol.\n@return string representing the token symbol",
             "id": 1363,
             "implemented": true,
             "kind": "function",
@@ -36780,7 +36818,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns an URI for a given token ID.\r\nThrows if the token ID does not exist. May return an empty string.\r\n@param tokenId uint256 ID of the token to query\r",
+            "documentation": "@dev Returns an URI for a given token ID.\nThrows if the token ID does not exist. May return an empty string.\n@param tokenId uint256 ID of the token to query",
             "id": 1382,
             "implemented": true,
             "kind": "function",
@@ -37055,7 +37093,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to set the token URI for a given token.\r\nReverts if the token ID does not exist.\r\n@param tokenId uint256 ID of the token to set its URI\r\n@param uri string URI to assign\r",
+            "documentation": "@dev Internal function to set the token URI for a given token.\nReverts if the token ID does not exist.\n@param tokenId uint256 ID of the token to set its URI\n@param uri string URI to assign",
             "id": 1403,
             "implemented": true,
             "kind": "function",
@@ -37187,7 +37225,7 @@
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1615,
+                        "referencedDeclaration": 1616,
                         "src": "37235:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_super$_ERC721Metadata_$1434",
@@ -37433,7 +37471,7 @@
                 }
               ]
             },
-            "documentation": "@dev Internal function to burn a specific token.\r\nReverts if the token does not exist.\r\nDeprecated, use _burn(uint256) instead.\r\n@param owner owner of the token to burn\r\n@param tokenId uint256 ID of the token being burned by the msg.sender\r",
+            "documentation": "@dev Internal function to burn a specific token.\nReverts if the token does not exist.\nDeprecated, use _burn(uint256) instead.\n@param owner owner of the token to burn\n@param tokenId uint256 ID of the token being burned by the msg.sender",
             "id": 1433,
             "implemented": true,
             "kind": "function",
@@ -37585,17 +37623,17 @@
           }
         ],
         "contractDependencies": [
-          930,
-          955,
-          1288,
           9,
           110,
           372,
+          930,
+          955,
+          1288,
           1309,
           1434
         ],
         "contractKind": "contract",
-        "documentation": "@title Full ERC721 Token\r\nThis implementation includes all the required and some optional functionality of the ERC721 standard\r\nMoreover, it includes approve all functionality using operator terminology\r\n@dev see https://eips.ethereum.org/EIPS/eip-721\r",
+        "documentation": "@title Full ERC721 Token\nThis implementation includes all the required and some optional functionality of the ERC721 standard\nMoreover, it includes approve all functionality using operator terminology\n@dev see https://eips.ethereum.org/EIPS/eip-721",
         "fullyImplemented": true,
         "id": 1454,
         "linearizedBaseContracts": [
@@ -37753,31 +37791,31 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "3.3.0",
-  "updatedAt": "2020-10-17T20:20:57.211Z",
+  "updatedAt": "2020-10-17T20:47:31.938Z",
   "devdoc": {
-    "details": "See https://eips.ethereum.org/EIPS/eip-721\r",
+    "details": "See https://eips.ethereum.org/EIPS/eip-721",
     "methods": {
       "balanceOf(address)": {
-        "details": "Returns the number of NFTs in `owner`'s account.\r"
+        "details": "Returns the number of NFTs in `owner`'s account."
       },
       "ownerOf(uint256)": {
-        "details": "Returns the owner of the NFT specified by `tokenId`.\r"
+        "details": "Returns the owner of the NFT specified by `tokenId`."
       },
       "safeTransferFrom(address,address,uint256)": {
-        "details": "Transfers a specific NFT (`tokenId`) from one account (`from`) to\r another (`to`).\r      * \r      * Requirements:\r - `from`, `to` cannot be zero.\r - `tokenId` must be owned by `from`.\r - If the caller is not `from`, it must be have been allowed to move this\r NFT by either `approve` or `setApproveForAll`.\r"
+        "details": "Transfers a specific NFT (`tokenId`) from one account (`from`) to another (`to`).      *       * Requirements: - `from`, `to` cannot be zero. - `tokenId` must be owned by `from`. - If the caller is not `from`, it must be have been allowed to move this NFT by either `approve` or `setApproveForAll`."
       },
       "supportsInterface(bytes4)": {
-        "details": "Returns true if this contract implements the interface defined by\r `interfaceId`. See the corresponding\r [EIP section](https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified)\r to learn more about how these ids are created.\r      * This function call must use less than 30 000 gas.\r"
+        "details": "Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding [EIP section](https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified) to learn more about how these ids are created.      * This function call must use less than 30 000 gas."
       },
       "transferFrom(address,address,uint256)": {
-        "details": "Transfers a specific NFT (`tokenId`) from one account (`from`) to\r another (`to`).\r      * Requirements:\r - If the caller is not `from`, it must be approved to move this NFT by\r either `approve` or `setApproveForAll`.\r"
+        "details": "Transfers a specific NFT (`tokenId`) from one account (`from`) to another (`to`).      * Requirements: - If the caller is not `from`, it must be approved to move this NFT by either `approve` or `setApproveForAll`."
       }
     },
-    "title": "ERC-721 Non-Fungible Token Standard, optional metadata extension\r"
+    "title": "ERC-721 Non-Fungible Token Standard, optional metadata extension"
   },
   "userdoc": {
     "methods": {}
